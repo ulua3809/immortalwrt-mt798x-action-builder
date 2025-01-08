@@ -251,7 +251,7 @@ jobs:
         uses: actions/cache/save@v4
         with:
           path: ./infos
-          key: $${{ runner.os }}-lastimmortalwrtHEADs
+          key: ${{ runner.os }}-lastimmortalwrtHEADs
 
       - name: postbuild - Delete old workflow runs
         if: ${{ inputs.delLastUpdateCheckFailed }}
