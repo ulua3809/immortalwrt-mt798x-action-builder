@@ -76,6 +76,7 @@ config global
 	option transparency_dark '0.5'
 EOL
 
-
-# statistics
+# statistics disable wireless collect
 sed -z -i "s/config statistics 'collectd_iwinfo'\n\toption enable '1'/config statistics 'collectd_iwinfo'\n\toption enable '0'/g" package/feeds/luci/luci-app-statistics/root/etc/config/luci_statistics
+# statistics disable interface collect
+sed -z -i "s/config statistics 'collectd_interface'\n\toption enable '1'/config statistics 'collectd_interface'\n\toption enable '0'/g" package/feeds/luci/luci-app-statistics/root/etc/config/luci_statistics
